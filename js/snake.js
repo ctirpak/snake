@@ -1,5 +1,5 @@
 ;(function() {
-  var BLOCK_SIZE = 10;
+  var BLOCK_SIZE = 16;
 
   var Game = function() {
     var screen = document.getElementById("screen").getContext('2d');
@@ -134,7 +134,7 @@
       this.handleKeyboard();
 
       var now = new Date().getTime();
-      if (now > this.lastMove + 50) {
+      if (now > this.lastMove + 100) {
         this.move();
         this.lastMove = now;
       }
@@ -276,9 +276,14 @@
   };
 
   var drawRect = function(screen, body, color) {
-    screen.fillStyle = color;
-    screen.fillRect(body.center.x - body.size.x / 2, body.center.y - body.size.y / 2,
+//    screen.fillStyle = color;
+//    screen.fillRect(body.center.x - body.size.x / 2, body.center.y - body.size.y / 2,
+//                    body.size.x, body.size.y);
+	screen.beginPath();
+	  screen.strokeStyle = color;
+    screen.rect(body.center.x - body.size.x / 2, body.center.y - body.size.y / 2,
                     body.size.x, body.size.y);
+	screen.stroke();
   };
 
   window.addEventListener('load', function() {
