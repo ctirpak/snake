@@ -1,0 +1,11 @@
+The following sites were used as a reference when building this project:
+
+https://github.com/maryrosecook/build-a-javascript-game-workshop
+https://vimeo.com/105955605
+https://www.airpair.com/javascript/posts/the-legend-of-canvas
+http://jlongster.com/Making-Sprite-based-Games-with-Canvas
+
+
+set PATH=C:\Users\Chris\AppData\Local\Programs\Python\Python35-32;%PATH%
+cd C:\Users\Chris\Documents\School\snake
+python -m http.server 4000
